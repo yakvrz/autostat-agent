@@ -1,1 +1,6 @@
 .venv/
+autostat.duckdb
+data/
+__pycache__/
+*.profile.html
+*.swp
