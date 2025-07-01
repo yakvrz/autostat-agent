@@ -1,0 +1,27 @@
+[project]
+name = "autostat-agent"
+version = "0.1.0"
+description = "Self-serve stats agent"
+authors = [
+    {name = "Koby Raz",email = "yakvrz@gmail.com"}
+]
+readme = "README.md"
+requires-python = "^3.11"
+dependencies = [
+    "fastapi (>=0.115.14,<0.116.0)",
+    "uvicorn (>=0.35.0,<0.36.0)",
+    "pydantic (>=2.11.7,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+black = "^25.1.0"
+ruff = "^0.12.1"
+mypy = "^1.16.1"
+pre-commit = "^4.2.0"
+
