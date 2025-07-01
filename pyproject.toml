@@ -2,17 +2,22 @@
 name = "autostat-agent"
 version = "0.1.0"
 description = "Self-serve stats agent"
-authors = [
-    {name = "Koby Raz",email = "yakvrz@gmail.com"}
-]
+authors = [{ name = "Koby Raz", email = "yakvrz@gmail.com" }]
 readme = "README.md"
-requires-python = "^3.11"
-dependencies = [
-    "fastapi (>=0.115.14,<0.116.0)",
-    "uvicorn (>=0.35.0,<0.36.0)",
-    "pydantic (>=2.11.7,<3.0.0)"
-]
 
+# ↓ change this line
+requires-python = ">=3.11,<3.13"
+
+dependencies = [
+    "fastapi>=0.115.14,<0.116.0",
+    "uvicorn>=0.35.0,<0.36.0",
+    "pydantic>=2.11.7,<3.0.0",
+    "python-multipart>=0.0.20,<0.0.21",
+    "pandas (>=2.3.0,<3.0.0)",
+    "ydata-profiling (>=4.16.1,<5.0.0)",
+    "duckdb (>=1.3.1,<2.0.0)",
+    "setuptools (>=80.9.0,<81.0.0)",
+]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -24,4 +29,3 @@ black = "^25.1.0"
 ruff = "^0.12.1"
 mypy = "^1.16.1"
 pre-commit = "^4.2.0"
-
